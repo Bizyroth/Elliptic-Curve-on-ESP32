@@ -12,4 +12,14 @@ Takes temperature and pressure's mesure with a BMP180 and ESP32 module.
 
 ### First connection between ESP32 and Server
 
-ESP32 and server wich receive data must be connected on the same WiFi network. When connection is done, the server must send first his ECIES public Key to compressed format (ie beginiing with 0x40).
+ESP32 and server wich receive data must be connected on the same WiFi network. When connection is done, the server must send first his ECIES public Key to compressed format (ie begining with 0x40). Then ESP32 send a packet with the symetric key encrypted with ECIES schema. The elliptic curve used is secp256r1.
+
+
+### Sending sample
+
+ESP32 bufferizes 10 samples and encrypt them with AES-GCM 256 bits. A local timestamp is added to the sample.
+
+
+### Files
+
+ecc.c and ecc.h perform all cryptography's function. bmp180.c and bmp180.h do the sample. These files are not mine and can be found at https://github.com/nkolban/esp32-snippets/blob/master/hardware/temperature%20and%20pressure/bmp180.c. 
