@@ -4,10 +4,10 @@ Takes temperature and pressure's mesure with a BMP180 and ESP32 module.
 
 ### Connection between ESP32 module and BMP180
 
-Branch VIN pin of BMP180 with 3v3 pin on ESP32
-Branch GND pin of BMP180 with GND pin on ESP32
-Branch SCL pin of BMP180 with IO23 pin on ESP32
-Branch SDA pin of BMP180 with IO22 pin on ESP32
+Branch VIN pin of BMP180 with 3v3 pin on ESP32\n
+Branch GND pin of BMP180 with GND pin on ESP32\n
+Branch SCL pin of BMP180 with IO23 pin on ESP32\n
+Branch SDA pin of BMP180 with IO22 pin on ESP32\n
 
 ### First connection between ESP32 and Server
 
