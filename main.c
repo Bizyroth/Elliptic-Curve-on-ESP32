@@ -14,8 +14,8 @@
 #include <errno.h>
 #include "bmp180.h"
 
-#define WIFI_SSID "AndroidHotspot1443"
-#define WIFI_PASS "9FNb{Jsr68"
+#define WIFI_SSID /*WiFi SSID (must be quoted)*/
+#define WIFI_PASS /*WiFi password (must be quoted)*/
 
 #define TIMER_KEY_GENERATION 	500000                   //interval between each symetric key generation (in ms)
 #define TIMER_MESURE     		3000					 //interval between each sample (in ms)
@@ -24,7 +24,7 @@
 #define TEMP_SIZE				8
 #define PRESS_SIZE				8
 
-#define IP_SERVER "192.168.43.186"
+#define IP_SERVER /*IP of the server wich receive data*/
 
 
 // Event group
