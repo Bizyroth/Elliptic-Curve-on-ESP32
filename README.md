@@ -14,6 +14,10 @@ To compile, build and flash ESP32 project see [here](https://github.com/espressi
 * Branch SCL pin of BMP180 with IO23 pin on ESP32
 * Branch SDA pin of BMP180 with IO22 pin on ESP32
 
+### Cryptographic function
+
+Sample are encrypted with AES-GCM 256 bits. Symetric key is send to the receiver by being encrypting following ECIES schema. uECC files from ESP32 is used for the elliptic curve cryptography and mbdetls/aes.h is used for AES-GCM.
+
 ### First connection between ESP32 and Server
 
 ESP32 and server wich receive data must be connected on the same WiFi network. When connection is done, the server must send first his ECIES public Key to compressed format (ie begining with 0x40). Then ESP32 send a packet with the symetric key encrypted with ECIES schema. The elliptic curve used is secp256r1.
