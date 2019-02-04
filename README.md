@@ -30,10 +30,11 @@ ESP32 bufferizes 10 samples and encrypts them with AES-GCM 256 bits. A local tim
 
 ### Files
 
-ecc.c and ecc.h perform all cryptography's function. bmp180.c and bmp180.h do the sample. Those files are not mine and can be found at https://github.com/nkolban/esp32-snippets/blob/master/hardware/temperature%20and%20pressure/bmp180.c. main.c connects to the WiFi network and launchs the two tasks:
+* ecc.c and ecc.h perform all cryptography's function. Those two files are not mine and can be found at https://github.com/kmackay/micro-ecc
+* bmp180.c and bmp180.h do the sample. Those files are not mine and can be found at https://github.com/nkolban/esp32-snippets/blob/master/hardware/temperature%20and%20pressure/bmp180.c. main.c connects to the WiFi network and launchs the two tasks:
 
-* Generates and sends the encrypted symetric key.
-* Samples and encrypt temperature and pressure.
+  * Generates and sends the encrypted symetric key.
+  * Samples and encrypt temperature and pressure.
 
 
 #### PS
